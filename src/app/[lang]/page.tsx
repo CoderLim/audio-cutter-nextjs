@@ -1,6 +1,7 @@
 import WaveformEditor from '@/components/WaveformEditor'
 import { getDictionary } from '@/i18n/getDictionary'
 import { i18nConfig } from '@/i18n/config'
+import type { Locale } from '@/i18n/types'
 
 export default async function Home({
   params,
@@ -9,7 +10,7 @@ export default async function Home({
 }) {
   const { lang } = await params;
   // Validate that lang is a supported locale
-  const validLang = i18nConfig.locales.some(locale => locale.code === lang) ? lang : 'en';
+  const validLang = (i18nConfig.locales.some(locale => locale.code === lang) ? lang : 'en') as Locale;
   const dict = await getDictionary(validLang)
 
   return (
@@ -20,7 +21,7 @@ export default async function Home({
           <h1 className="text-4xl font-bold text-gray-900 mb-4">{dict.hero.title}</h1>
           <p className="text-xl text-gray-600 mb-8">{dict.hero.subtitle}</p>
           <div className="bg-white rounded-lg shadow-lg p-6">
-            <WaveformEditor />
+            <WaveformEditor dictionary={dict} />
           </div>
         </div>
       </section>

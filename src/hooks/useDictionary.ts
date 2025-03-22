@@ -2,6 +2,8 @@ import { useParams } from 'next/navigation'
 import { getDictionary } from '@/i18n/getDictionary'
 import { useEffect, useState } from 'react'
 import type { Dictionary } from '@/i18n/types'
+import { i18nConfig } from '@/i18n/config'
+import type { Locale } from '@/i18n/types'
 
 // 默认的空字典
 const emptyDictionary: Dictionary = {
@@ -48,7 +50,8 @@ export function useDictionary() {
   useEffect(() => {
     const loadDictionary = async () => {
       try {
-        const locale = (params?.lang as string) || 'en'
+        const rawLocale = (params?.lang as string) || 'en'
+        const locale = (i18nConfig.locales.some(l => l.code === rawLocale) ? rawLocale : 'en') as Locale
         const dict = await getDictionary(locale)
         setDictionary(dict)
       } catch (error) {

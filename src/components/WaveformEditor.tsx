@@ -6,10 +6,14 @@ import RegionsPlugin from 'wavesurfer.js/dist/plugins/regions'
 import { useAudioStore } from '@/store/audioStore'
 import { PlayIcon, PauseIcon } from '@heroicons/react/24/outline'
 import '@/app/WaveformEditor.css'
-import { useDictionary } from '@/hooks/useDictionary'
 import type { Region } from 'wavesurfer.js/dist/plugins/regions'
+import type { Dictionary } from '@/i18n/types'
 
-export default function WaveformEditor() {
+interface WaveformEditorProps {
+  dictionary: Dictionary;
+}
+
+export default function WaveformEditor({ dictionary }: WaveformEditorProps) {
   const waveformRef = useRef<HTMLDivElement>(null)
   const wavesurferRef = useRef<WaveSurfer | null>(null)
   const regionsPluginRef = useRef<RegionsPlugin | null>(null)
@@ -22,18 +26,16 @@ export default function WaveformEditor() {
   const [regionStartPosition, setRegionStartPosition] = useState(0)
   const [regionEndPosition, setRegionEndPosition] = useState(0)
   
-  const dictionary = useDictionary()
-  
-  // 添加进度位置日志
-  useEffect(() => {
-    console.log('Progress position updated:', progressPosition + '%')
-  }, [progressPosition])
-
   const audioFile = useAudioStore((state) => state.audioFile)
   const isPlaying = useAudioStore((state) => state.isPlaying)
   const setIsPlaying = useAudioStore((state) => state.setIsPlaying)
   const setSelectedSegmentStore = useAudioStore((state) => state.setSelectedSegment)
   const clearAudioFile = useAudioStore((state) => state.clearAudioFile)
+
+  // 添加进度位置日志
+  useEffect(() => {
+    console.log('Progress position updated:', progressPosition + '%')
+  }, [progressPosition])
 
   // 初始化 WaveSurfer
   useEffect(() => {
