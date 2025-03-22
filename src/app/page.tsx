@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-gray-50">
       {/* Hero Section with Tool Entry */}
-      <section className="bg-white border-b">
+      <section className="bg-white">
         <div className="container mx-auto px-4 py-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">MP3 Cutter - Free Online Audio Splitter</h1>
           <p className="text-xl text-gray-600 mb-8">Split and trim your MP3 files with precision. No registration required.</p>
@@ -15,7 +15,7 @@ export default function Home() {
       </section>
 
       {/* Main Features Section */}
-      <section className="py-12">
+      <section className="py-12 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">Main Features of Our MP3 Cutter</h2>
           <div className="grid md:grid-cols-3 gap-8">
