@@ -69,7 +69,7 @@ export default function WaveformEditor() {
         setSelectedSegment(region)
         setSelectedSegmentStore({
           id: region.id,
-          name: `片段 ${Math.floor(region.start)}-${Math.floor(region.end)}`,
+          name: `segment ${Math.floor(region.start)}-${Math.floor(region.end)}`,
           startTime: region.start,
           endTime: region.end,
           duration: region.end - region.start
@@ -467,12 +467,11 @@ export default function WaveformEditor() {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-4">
-              <h2 className="text-xl font-semibold text-gray-900">波形编辑器</h2>
               <button
                 onClick={clearAudioFile}
                 className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 border border-gray-200 rounded-lg hover:border-gray-300 transition-all duration-200"
               >
-                重新选择文件
+                Choose New File
               </button>
             </div>
             <div className="flex items-center gap-4">
@@ -489,7 +488,7 @@ export default function WaveformEditor() {
                 disabled={!selectedSegment || isSaving}
                 className="save-button"
               >
-                {isSaving ? '保存中...' : '保存片段'}
+                {isSaving ? 'Saving...' : 'Save Segment'}
               </button>
               <button
                 onClick={togglePlayPause}
@@ -498,12 +497,12 @@ export default function WaveformEditor() {
                 {isPlaying ? (
                   <>
                     <PauseIcon className="w-5 h-5" />
-                    暂停
+                    Pause
                   </>
                 ) : (
                   <>
                     <PlayIcon className="w-5 h-5" />
-                    播放
+                    Play
                   </>
                 )}
               </button>
@@ -554,7 +553,7 @@ export default function WaveformEditor() {
           {/* 时间输入控制 */}
           <div className="time-control">
             <div className="flex items-center gap-2">
-              <label className="text-sm text-gray-600">开始时间:</label>
+              <label className="text-sm text-gray-600">Start Time:</label>
               <div className="time-input-group">
                 <input
                   type="text"
@@ -584,7 +583,7 @@ export default function WaveformEditor() {
             </div>
 
             <div className="flex items-center gap-2">
-              <label className="text-sm text-gray-600">结束时间:</label>
+              <label className="text-sm text-gray-600">End Time:</label>
               <div className="time-input-group">
                 <input
                   type="text"
@@ -616,8 +615,8 @@ export default function WaveformEditor() {
         </div>
       ) : (
         <div className="upload-area">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">音频文件</h2>
-          <p className="mb-4 text-gray-600">拖放音频文件到这里，或点击选择文件</p>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Audio File</h2>
+          <p className="mb-4 text-gray-600">Drag and drop an audio file here, or click to select</p>
           <input
             id="audio-upload"
             type="file"
@@ -634,7 +633,7 @@ export default function WaveformEditor() {
             onClick={() => document.getElementById('audio-upload')?.click()}
             className="play-control-button"
           >
-            选择文件
+            Choose File
           </button>
         </div>
       )}

@@ -33,11 +33,11 @@ export default function AudioUploader() {
       <ArrowUpTrayIcon className="mx-auto h-12 w-12 text-gray-400" />
       <p className="mt-2 text-sm text-gray-600">
         {isDragActive
-          ? '将文件拖放到这里...'
-          : '拖放音频文件到这里，或点击选择文件'}
+          ? 'Drop the file here...'
+          : 'Drag and drop an audio file here, or click to select'}
       </p>
       <p className="mt-1 text-xs text-gray-500">
-        支持的格式：MP3, WAV, M4A, OGG
+        Supported formats: MP3, WAV, M4A, OGG
       </p>
     </div>
   )
