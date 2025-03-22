@@ -6,12 +6,8 @@ import RegionsPlugin from 'wavesurfer.js/dist/plugins/regions'
 import { useAudioStore } from '@/store/audioStore'
 import { PlayIcon, PauseIcon } from '@heroicons/react/24/outline'
 import '@/app/WaveformEditor.css'
-
-interface Region {
-  id: string
-  start: number
-  end: number
-}
+import { useDictionary } from '@/hooks/useDictionary'
+import type { Region } from 'wavesurfer.js/dist/plugins/regions'
 
 export default function WaveformEditor() {
   const waveformRef = useRef<HTMLDivElement>(null)
@@ -25,6 +21,8 @@ export default function WaveformEditor() {
   const [progressPosition, setProgressPosition] = useState(0)
   const [regionStartPosition, setRegionStartPosition] = useState(0)
   const [regionEndPosition, setRegionEndPosition] = useState(0)
+  
+  const dictionary = useDictionary()
   
   // 添加进度位置日志
   useEffect(() => {
@@ -405,7 +403,7 @@ export default function WaveformEditor() {
     
     // 更新波形图上的分割线位置
     regionsPluginRef.current.clearRegions()
-    regionsPluginRef.current.addRegion({
+    const region = regionsPluginRef.current.addRegion({
       id,
       start,
       end,
@@ -419,7 +417,7 @@ export default function WaveformEditor() {
     // 更新气泡位置和选中片段
     setRegionStartPosition((start / duration) * 100)
     setRegionEndPosition((end / duration) * 100)
-    setSelectedSegment({ id, start, end })
+    setSelectedSegment(region)
   }
 
   // 处理时间输入框获得焦点
@@ -471,7 +469,7 @@ export default function WaveformEditor() {
                 onClick={clearAudioFile}
                 className="px-3 py-1.5 text-sm text-gray-600 hover:text-gray-900 border border-gray-200 rounded-lg hover:border-gray-300 transition-all duration-200"
               >
-                Choose New File
+                {dictionary.upload.newFile}
               </button>
             </div>
             <div className="flex items-center gap-4">
@@ -488,7 +486,7 @@ export default function WaveformEditor() {
                 disabled={!selectedSegment || isSaving}
                 className="save-button"
               >
-                {isSaving ? 'Saving...' : 'Save Segment'}
+                {isSaving ? dictionary.editor.saving : dictionary.editor.save}
               </button>
               <button
                 onClick={togglePlayPause}
@@ -497,12 +495,12 @@ export default function WaveformEditor() {
                 {isPlaying ? (
                   <>
                     <PauseIcon className="w-5 h-5" />
-                    Pause
+                    {dictionary.editor.pause}
                   </>
                 ) : (
                   <>
                     <PlayIcon className="w-5 h-5" />
-                    Play
+                    {dictionary.editor.play}
                   </>
                 )}
               </button>
@@ -552,71 +550,62 @@ export default function WaveformEditor() {
 
           {/* 时间输入控制 */}
           <div className="time-control">
-            <div className="flex items-center gap-2">
-              <label className="text-sm text-gray-600">Start Time:</label>
-              <div className="time-input-group">
-                <input
-                  type="text"
-                  value={selectedSegment ? formatTime(selectedSegment.start) : '00:00:00'}
-                  onChange={(e) => handleTimeInput('start', e.target.value)}
-                  onKeyDown={(e) => handleTimeKeyDown(e)}
-                  onFocus={handleTimeFocus}
-                  className="time-input"
-                  pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}"
-                  placeholder="00:00:00"
-                />
-                <div className="time-adjust-buttons">
-                  <button
-                    onClick={() => adjustTime('start', 1)}
-                    className="time-adjust-button"
-                  >
-                    ▲
-                  </button>
-                  <button
-                    onClick={() => adjustTime('start', -1)}
-                    className="time-adjust-button"
-                  >
-                    ▼
-                  </button>
-                </div>
+            <div className="time-input-group">
+              <input
+                type="text"
+                value={selectedSegment ? formatTime(selectedSegment.start) : '00:00:00'}
+                onChange={(e) => handleTimeInput('start', e.target.value)}
+                onKeyDown={handleTimeKeyDown}
+                onFocus={handleTimeFocus}
+                placeholder="00:00:00"
+                className="time-input"
+              />
+              <div className="time-adjust-buttons">
+                <button
+                  className="time-adjust-button"
+                  onClick={() => adjustTime('start', 1)}
+                >
+                  +
+                </button>
+                <button
+                  className="time-adjust-button"
+                  onClick={() => adjustTime('start', -1)}
+                >
+                  -
+                </button>
               </div>
             </div>
-
-            <div className="flex items-center gap-2">
-              <label className="text-sm text-gray-600">End Time:</label>
-              <div className="time-input-group">
-                <input
-                  type="text"
-                  value={selectedSegment ? formatTime(selectedSegment.end) : formatTime(Number(duration))}
-                  onChange={(e) => handleTimeInput('end', e.target.value)}
-                  onKeyDown={(e) => handleTimeKeyDown(e)}
-                  onFocus={handleTimeFocus}
-                  className="time-input"
-                  pattern="[0-9]{2}:[0-9]{2}:[0-9]{2}"
-                  placeholder="00:00:00"
-                />
-                <div className="time-adjust-buttons">
-                  <button
-                    onClick={() => adjustTime('end', 1)}
-                    className="time-adjust-button"
-                  >
-                    ▲
-                  </button>
-                  <button
-                    onClick={() => adjustTime('end', -1)}
-                    className="time-adjust-button"
-                  >
-                    ▼
-                  </button>
-                </div>
+            <div className="time-input-group">
+              <input
+                type="text"
+                value={selectedSegment ? formatTime(selectedSegment.end) : formatTime(Number(duration))}
+                onChange={(e) => handleTimeInput('end', e.target.value)}
+                onKeyDown={handleTimeKeyDown}
+                onFocus={handleTimeFocus}
+                placeholder="00:00:00"
+                className="time-input"
+              />
+              <div className="time-adjust-buttons">
+                <button
+                  className="time-adjust-button"
+                  onClick={() => adjustTime('end', 1)}
+                >
+                  +
+                </button>
+                <button
+                  className="time-adjust-button"
+                  onClick={() => adjustTime('end', -1)}
+                >
+                  -
+                </button>
               </div>
             </div>
           </div>
         </div>
       ) : (
         <div className="upload-area">
-          <h2 className="text-xl font-semibold text-gray-900 mb-4">Audio File</h2>
-          <p className="mb-4 text-gray-600">Drag and drop an audio file here, or click to select</p>
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">{dictionary.upload.title}</h2>
+          <p className="mb-4 text-gray-600">{dictionary.upload.dropzone}</p>
           <input
             id="audio-upload"
             type="file"
@@ -633,7 +622,7 @@ export default function WaveformEditor() {
             onClick={() => document.getElementById('audio-upload')?.click()}
             className="play-control-button"
           >
-            Choose File
+            {dictionary.upload.button}
           </button>
         </div>
       )}

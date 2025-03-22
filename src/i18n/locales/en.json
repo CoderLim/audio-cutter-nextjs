@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "MP3 Cutter - Free Online Audio Splitter Tool",
+    "description": "Free online MP3 cutter tool to split and trim audio files. Easy to use, no registration required. Cut MP3 files with precision and download instantly."
+  },
+  "header": {
+    "title": "MP3 Cutter"
+  },
+  "hero": {
+    "title": "MP3 Cutter - Free Online Audio Splitter",
+    "subtitle": "Split and trim your MP3 files with precision. No registration required."
+  },
+  "upload": {
+    "title": "Audio File",
+    "dropzone": "Drag and drop an audio file here, or click to select",
+    "button": "Choose File",
+    "newFile": "Choose New File"
+  },
+  "editor": {
+    "save": "Save Segment",
+    "saving": "Saving...",
+    "play": "Play",
+    "pause": "Pause",
+    "startTime": "Start Time",
+    "endTime": "End Time"
+  },
+  "features": {
+    "title": "Main Features of Our MP3 Cutter",
+    "precise": {
+      "title": "Precise Cutting",
+      "description": "Our MP3 cutter provides millisecond-level precision for accurate audio splitting. Perfect for creating ringtones or extracting specific parts of your audio files."
+    },
+    "waveform": {
+      "title": "Waveform Visualization",
+      "description": "Visual waveform display helps you identify exact cutting points. The intuitive interface makes it easy to select the perfect segment of your audio."
+    },
+    "instant": {
+      "title": "Instant Download",
+      "description": "Process your MP3 files instantly and download them immediately. No waiting time, no watermarks, and no quality loss."
+    }
+  },
+  "howTo": {
+    "title": "How to Use Our MP3 Cutter",
+    "step1": {
+      "title": "Upload Your MP3 File",
+      "description": "Click the upload button or drag and drop your MP3 file into the designated area. Our MP3 cutter supports files up to 50MB in size."
+    },
+    "step2": {
+      "title": "Select Cutting Points",
+      "description": "Use the waveform visualization to select your desired cutting points. You can either drag the handles or input exact timestamps for precise control."
+    },
+    "step3": {
+      "title": "Preview and Download",
+      "description": "Preview your selection using the built-in player. Once satisfied, click the download button to save your trimmed MP3 file."
+    }
+  },
+  "whyChoose": {
+    "title": "Why Choose Our MP3 Cutter?",
+    "browser": {
+      "title": "Browser-Based Solution",
+      "description": "Our MP3 cutter runs entirely in your browser, eliminating the need for software installation. Access it from any device with an internet connection."
+    },
+    "privacy": {
+      "title": "Privacy-Focused",
+      "description": "Your audio files are processed locally in your browser. We never store or transmit your files to our servers, ensuring complete privacy."
+    },
+    "quality": {
+      "title": "High-Quality Output",
+      "description": "Our MP3 cutter maintains the original audio quality of your files. No compression or quality loss during the cutting process."
+    },
+    "interface": {
+      "title": "User-Friendly Interface",
+      "description": "The intuitive design of our MP3 cutter makes it easy for anyone to split their audio files, regardless of technical expertise."
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "items": {
+      "free": {
+        "question": "Is this MP3 cutter free to use?",
+        "answer": "Yes, our MP3 cutter is completely free to use. There are no hidden charges or premium features. You can split as many MP3 files as you want without any limitations."
+      },
+      "size": {
+        "question": "What file sizes does the MP3 cutter support?",
+        "answer": "Our MP3 cutter supports files up to 50MB in size. This should be sufficient for most audio files, including full-length songs and podcasts."
+      },
+      "quality": {
+        "question": "Will the MP3 cutter affect audio quality?",
+        "answer": "No, our MP3 cutter maintains the original audio quality of your files. We use advanced algorithms to ensure precise cutting without any quality loss."
+      },
+      "security": {
+        "question": "Is my audio data secure?",
+        "answer": "Yes, your audio files are processed entirely in your browser. We never store or transmit your files to our servers, ensuring complete privacy and security."
+      },
+      "mobile": {
+        "question": "Can I use the MP3 cutter on mobile devices?",
+        "answer": "Yes, our MP3 cutter is fully responsive and works on all devices, including smartphones and tablets. The interface adapts to your screen size for optimal usability."
+      }
+    }
+  }
+} 

@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "MP3-Schneider - Kostenloses Online-Audio-Teilungswerkzeug",
+    "description": "Kostenloses Online-Tool zum Schneiden und Teilen von MP3-Dateien. Einfach zu bedienen, keine Registrierung erforderlich. Schneiden Sie MP3-Dateien präzise und laden Sie sie sofort herunter."
+  },
+  "header": {
+    "title": "MP3-Schneider"
+  },
+  "hero": {
+    "title": "MP3-Schneider - Kostenloser Online-Audio-Splitter",
+    "subtitle": "Teilen und schneiden Sie Ihre MP3-Dateien präzise. Keine Registrierung erforderlich."
+  },
+  "upload": {
+    "title": "Audiodatei",
+    "dropzone": "Ziehen Sie eine Audiodatei hierher oder klicken Sie zum Auswählen",
+    "button": "Datei auswählen",
+    "newFile": "Neue Datei auswählen"
+  },
+  "editor": {
+    "save": "Segment speichern",
+    "saving": "Wird gespeichert...",
+    "play": "Abspielen",
+    "pause": "Pause",
+    "startTime": "Startzeit",
+    "endTime": "Endzeit"
+  },
+  "features": {
+    "title": "Hauptfunktionen unseres MP3-Schneiders",
+    "precise": {
+      "title": "Präzises Schneiden",
+      "description": "Unser MP3-Schneider bietet millisekundengenaue Präzision für genaues Audio-Splitting. Perfekt zum Erstellen von Klingeltönen oder zum Extrahieren bestimmter Teile Ihrer Audiodateien."
+    },
+    "waveform": {
+      "title": "Wellenform-Visualisierung",
+      "description": "Die visuelle Wellenform-Anzeige hilft Ihnen, exakte Schnittpunkte zu identifizieren. Die intuitive Oberfläche macht es einfach, das perfekte Segment Ihrer Audiodatei auszuwählen."
+    },
+    "instant": {
+      "title": "Sofortiger Download",
+      "description": "Verarbeiten Sie Ihre MP3-Dateien sofort und laden Sie sie umgehend herunter. Keine Wartezeit, keine Wasserzeichen und kein Qualitätsverlust."
+    }
+  },
+  "howTo": {
+    "title": "Wie man unseren MP3-Schneider verwendet",
+    "step1": {
+      "title": "MP3-Datei hochladen",
+      "description": "Klicken Sie auf den Upload-Button oder ziehen Sie Ihre MP3-Datei in den vorgesehenen Bereich. Unser MP3-Schneider unterstützt Dateien bis zu 50MB."
+    },
+    "step2": {
+      "title": "Schnittpunkte auswählen",
+      "description": "Nutzen Sie die Wellenform-Visualisierung, um Ihre gewünschten Schnittpunkte auszuwählen. Sie können die Griffe ziehen oder exakte Zeitstempel für präzise Kontrolle eingeben."
+    },
+    "step3": {
+      "title": "Vorschau und Download",
+      "description": "Hören Sie sich Ihre Auswahl mit dem eingebauten Player an. Wenn Sie zufrieden sind, klicken Sie auf den Download-Button, um Ihre geschnittene MP3-Datei zu speichern."
+    }
+  },
+  "whyChoose": {
+    "title": "Warum unseren MP3-Schneider wählen?",
+    "browser": {
+      "title": "Browser-basierte Lösung",
+      "description": "Unser MP3-Schneider läuft vollständig in Ihrem Browser und macht Softwareinstallationen überflüssig. Zugriff von jedem Gerät mit Internetverbindung."
+    },
+    "privacy": {
+      "title": "Datenschutzorientiert",
+      "description": "Ihre Audiodateien werden lokal in Ihrem Browser verarbeitet. Wir speichern oder übertragen Ihre Dateien nie auf unsere Server und garantieren vollständige Privatsphäre."
+    },
+    "quality": {
+      "title": "Hochwertige Ausgabe",
+      "description": "Unser MP3-Schneider behält die ursprüngliche Audioqualität Ihrer Dateien bei. Keine Komprimierung oder Qualitätsverlust während des Schneidevorgangs."
+    },
+    "interface": {
+      "title": "Benutzerfreundliche Oberfläche",
+      "description": "Das intuitive Design unseres MP3-Schneiders macht es jedem leicht, Audiodateien zu teilen, unabhängig von technischer Expertise."
+    }
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "items": {
+      "free": {
+        "question": "Ist der MP3-Schneider kostenlos?",
+        "answer": "Ja, unser MP3-Schneider ist völlig kostenlos. Es gibt keine versteckten Gebühren oder Premium-Funktionen. Sie können beliebig viele MP3-Dateien ohne Einschränkungen teilen."
+      },
+      "size": {
+        "question": "Welche Dateigröße unterstützt der MP3-Schneider?",
+        "answer": "Unser MP3-Schneider unterstützt Dateien bis zu 50MB. Das sollte für die meisten Audiodateien ausreichen, einschließlich vollständiger Songs und Podcasts."
+      },
+      "quality": {
+        "question": "Beeinflusst der MP3-Schneider die Audioqualität?",
+        "answer": "Nein, unser MP3-Schneider behält die ursprüngliche Audioqualität Ihrer Dateien bei. Wir verwenden fortschrittliche Algorithmen für präzises Schneiden ohne Qualitätsverlust."
+      },
+      "security": {
+        "question": "Sind meine Audiodaten sicher?",
+        "answer": "Ja, Ihre Audiodateien werden vollständig in Ihrem Browser verarbeitet. Wir speichern oder übertragen Ihre Dateien nie auf unsere Server und garantieren vollständige Privatsphäre und Sicherheit."
+      },
+      "mobile": {
+        "question": "Kann ich den MP3-Schneider auf mobilen Geräten nutzen?",
+        "answer": "Ja, unser MP3-Schneider ist vollständig responsiv und funktioniert auf allen Geräten, einschließlich Smartphones und Tablets. Die Oberfläche passt sich für optimale Benutzerfreundlichkeit an Ihre Bildschirmgröße an."
+      }
+    }
+  }
+} 

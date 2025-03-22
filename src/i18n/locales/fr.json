@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "Découpeur MP3 - Outil Gratuit de Découpage Audio en Ligne",
+    "description": "Outil en ligne gratuit pour couper et diviser des fichiers MP3. Facile à utiliser, sans inscription requise. Découpez vos fichiers MP3 avec précision et téléchargez-les instantanément."
+  },
+  "header": {
+    "title": "Découpeur MP3"
+  },
+  "hero": {
+    "title": "Découpeur MP3 - Diviseur Audio en Ligne Gratuit",
+    "subtitle": "Divisez et découpez vos fichiers MP3 avec précision. Aucune inscription requise."
+  },
+  "upload": {
+    "title": "Fichier Audio",
+    "dropzone": "Glissez et déposez un fichier audio ici, ou cliquez pour sélectionner",
+    "button": "Choisir un Fichier",
+    "newFile": "Choisir un Nouveau Fichier"
+  },
+  "editor": {
+    "save": "Sauvegarder le Segment",
+    "saving": "Sauvegarde en cours...",
+    "play": "Lecture",
+    "pause": "Pause",
+    "startTime": "Temps de Début",
+    "endTime": "Temps de Fin"
+  },
+  "features": {
+    "title": "Principales Fonctionnalités de Notre Découpeur MP3",
+    "precise": {
+      "title": "Découpage Précis",
+      "description": "Notre découpeur MP3 offre une précision à la milliseconde pour un découpage audio précis. Parfait pour créer des sonneries ou extraire des parties spécifiques de vos fichiers audio."
+    },
+    "waveform": {
+      "title": "Visualisation de la Forme d'Onde",
+      "description": "L'affichage visuel de la forme d'onde vous aide à identifier les points de découpage exacts. L'interface intuitive facilite la sélection du segment parfait de votre audio."
+    },
+    "instant": {
+      "title": "Téléchargement Instantané",
+      "description": "Traitez vos fichiers MP3 instantanément et téléchargez-les immédiatement. Pas de temps d'attente, pas de filigrane, et pas de perte de qualité."
+    }
+  },
+  "howTo": {
+    "title": "Comment Utiliser Notre Découpeur MP3",
+    "step1": {
+      "title": "Téléchargez Votre Fichier MP3",
+      "description": "Cliquez sur le bouton de téléchargement ou glissez-déposez votre fichier MP3 dans la zone désignée. Notre découpeur MP3 prend en charge les fichiers jusqu'à 50MB."
+    },
+    "step2": {
+      "title": "Sélectionnez les Points de Découpage",
+      "description": "Utilisez la visualisation de la forme d'onde pour sélectionner vos points de découpage souhaités. Vous pouvez faire glisser les poignées ou saisir des horodatages précis pour un contrôle exact."
+    },
+    "step3": {
+      "title": "Prévisualisez et Téléchargez",
+      "description": "Prévisualisez votre sélection à l'aide du lecteur intégré. Une fois satisfait, cliquez sur le bouton de téléchargement pour sauvegarder votre fichier MP3 découpé."
+    }
+  },
+  "whyChoose": {
+    "title": "Pourquoi Choisir Notre Découpeur MP3 ?",
+    "browser": {
+      "title": "Solution Basée sur le Navigateur",
+      "description": "Notre découpeur MP3 fonctionne entièrement dans votre navigateur, éliminant le besoin d'installation de logiciel. Accédez-y depuis n'importe quel appareil avec une connexion Internet."
+    },
+    "privacy": {
+      "title": "Axé sur la Confidentialité",
+      "description": "Vos fichiers audio sont traités localement dans votre navigateur. Nous ne stockons ni ne transmettons jamais vos fichiers vers nos serveurs, garantissant une confidentialité totale."
+    },
+    "quality": {
+      "title": "Sortie de Haute Qualité",
+      "description": "Notre découpeur MP3 maintient la qualité audio originale de vos fichiers. Pas de compression ni de perte de qualité pendant le processus de découpage."
+    },
+    "interface": {
+      "title": "Interface Conviviale",
+      "description": "La conception intuitive de notre découpeur MP3 facilite la division des fichiers audio pour tout le monde, indépendamment de l'expertise technique."
+    }
+  },
+  "faq": {
+    "title": "Questions Fréquemment Posées",
+    "items": {
+      "free": {
+        "question": "Le découpeur MP3 est-il gratuit ?",
+        "answer": "Oui, notre découpeur MP3 est entièrement gratuit. Il n'y a pas de frais cachés ni de fonctionnalités premium. Vous pouvez diviser autant de fichiers MP3 que vous le souhaitez sans limitations."
+      },
+      "size": {
+        "question": "Quelles tailles de fichier le découpeur MP3 prend-il en charge ?",
+        "answer": "Notre découpeur MP3 prend en charge les fichiers jusqu'à 50MB. Cela devrait être suffisant pour la plupart des fichiers audio, y compris les chansons complètes et les podcasts."
+      },
+      "quality": {
+        "question": "Le découpeur MP3 affecte-t-il la qualité audio ?",
+        "answer": "Non, notre découpeur MP3 maintient la qualité audio originale de vos fichiers. Nous utilisons des algorithmes avancés pour assurer un découpage précis sans perte de qualité."
+      },
+      "security": {
+        "question": "Mes données audio sont-elles sécurisées ?",
+        "answer": "Oui, vos fichiers audio sont traités entièrement dans votre navigateur. Nous ne stockons ni ne transmettons jamais vos fichiers vers nos serveurs, garantissant une confidentialité et une sécurité totales."
+      },
+      "mobile": {
+        "question": "Puis-je utiliser le découpeur MP3 sur des appareils mobiles ?",
+        "answer": "Oui, notre découpeur MP3 est entièrement réactif et fonctionne sur tous les appareils, y compris les smartphones et les tablettes. L'interface s'adapte à la taille de votre écran pour une utilisation optimale."
+      }
+    }
+  }
+} 

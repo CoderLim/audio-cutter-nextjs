@@ -1,0 +1,101 @@
+{
+  "meta": {
+    "title": "Cortador de MP3 - Ferramenta Online Gratuita para Dividir Áudio",
+    "description": "Ferramenta online gratuita para cortar e dividir arquivos MP3. Fácil de usar, sem necessidade de registro. Corte arquivos MP3 com precisão e faça download instantaneamente."
+  },
+  "header": {
+    "title": "Cortador de MP3"
+  },
+  "hero": {
+    "title": "Cortador de MP3 - Divisor de Áudio Online Gratuito",
+    "subtitle": "Divida e corte seus arquivos MP3 com precisão. Sem necessidade de registro."
+  },
+  "upload": {
+    "title": "Arquivo de Áudio",
+    "dropzone": "Arraste e solte um arquivo de áudio aqui, ou clique para selecionar",
+    "button": "Escolher Arquivo",
+    "newFile": "Escolher Novo Arquivo"
+  },
+  "editor": {
+    "save": "Salvar Segmento",
+    "saving": "Salvando...",
+    "play": "Reproduzir",
+    "pause": "Pausar",
+    "startTime": "Tempo Inicial",
+    "endTime": "Tempo Final"
+  },
+  "features": {
+    "title": "Principais Recursos do Nosso Cortador de MP3",
+    "precise": {
+      "title": "Corte Preciso",
+      "description": "Nosso cortador de MP3 oferece precisão em nível de milissegundos para divisão precisa de áudio. Perfeito para criar toques ou extrair partes específicas dos seus arquivos de áudio."
+    },
+    "waveform": {
+      "title": "Visualização da Forma de Onda",
+      "description": "A exibição visual da forma de onda ajuda você a identificar pontos exatos de corte. A interface intuitiva facilita a seleção do segmento perfeito do seu áudio."
+    },
+    "instant": {
+      "title": "Download Instantâneo",
+      "description": "Processe seus arquivos MP3 instantaneamente e faça o download imediatamente. Sem tempo de espera, sem marcas d'água e sem perda de qualidade."
+    }
+  },
+  "howTo": {
+    "title": "Como Usar Nosso Cortador de MP3",
+    "step1": {
+      "title": "Envie Seu Arquivo MP3",
+      "description": "Clique no botão de upload ou arraste e solte seu arquivo MP3 na área designada. Nosso cortador de MP3 suporta arquivos de até 50MB."
+    },
+    "step2": {
+      "title": "Selecione os Pontos de Corte",
+      "description": "Use a visualização da forma de onda para selecionar seus pontos de corte desejados. Você pode arrastar as alças ou inserir timestamps exatos para um controle preciso."
+    },
+    "step3": {
+      "title": "Pré-visualize e Faça Download",
+      "description": "Pré-visualize sua seleção usando o player integrado. Quando estiver satisfeito, clique no botão de download para salvar seu arquivo MP3 cortado."
+    }
+  },
+  "whyChoose": {
+    "title": "Por Que Escolher Nosso Cortador de MP3?",
+    "browser": {
+      "title": "Solução Baseada no Navegador",
+      "description": "Nosso cortador de MP3 funciona inteiramente no seu navegador, eliminando a necessidade de instalação de software. Acesse de qualquer dispositivo com conexão à internet."
+    },
+    "privacy": {
+      "title": "Focado em Privacidade",
+      "description": "Seus arquivos de áudio são processados localmente no seu navegador. Nunca armazenamos ou transmitimos seus arquivos para nossos servidores, garantindo total privacidade."
+    },
+    "quality": {
+      "title": "Saída de Alta Qualidade",
+      "description": "Nosso cortador de MP3 mantém a qualidade original do áudio dos seus arquivos. Sem compressão ou perda de qualidade durante o processo de corte."
+    },
+    "interface": {
+      "title": "Interface Amigável",
+      "description": "O design intuitivo do nosso cortador de MP3 facilita a divisão de arquivos de áudio para qualquer pessoa, independentemente da experiência técnica."
+    }
+  },
+  "faq": {
+    "title": "Perguntas Frequentes",
+    "items": {
+      "free": {
+        "question": "O cortador de MP3 é gratuito?",
+        "answer": "Sim, nosso cortador de MP3 é completamente gratuito. Não há cobranças ocultas ou recursos premium. Você pode dividir quantos arquivos MP3 quiser sem limitações."
+      },
+      "size": {
+        "question": "Quais tamanhos de arquivo o cortador de MP3 suporta?",
+        "answer": "Nosso cortador de MP3 suporta arquivos de até 50MB. Isso deve ser suficiente para a maioria dos arquivos de áudio, incluindo músicas completas e podcasts."
+      },
+      "quality": {
+        "question": "O cortador de MP3 afeta a qualidade do áudio?",
+        "answer": "Não, nosso cortador de MP3 mantém a qualidade original do áudio dos seus arquivos. Usamos algoritmos avançados para garantir um corte preciso sem perda de qualidade."
+      },
+      "security": {
+        "question": "Meus dados de áudio estão seguros?",
+        "answer": "Sim, seus arquivos de áudio são processados inteiramente no seu navegador. Nunca armazenamos ou transmitimos seus arquivos para nossos servidores, garantindo total privacidade e segurança."
+      },
+      "mobile": {
+        "question": "Posso usar o cortador de MP3 em dispositivos móveis?",
+        "answer": "Sim, nosso cortador de MP3 é totalmente responsivo e funciona em todos os dispositivos, incluindo smartphones e tablets. A interface se adapta ao tamanho da sua tela para uma usabilidade ideal."
+      }
+    }
+  }
+} 
