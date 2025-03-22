@@ -2,6 +2,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Image from "next/image";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import PlausibleGA from "@/components/PlausibleGA";
+import GA from "@/components/GA";
 import { i18nConfig } from "@/i18n/config";
 
 const geistSans = Geist({
@@ -31,6 +33,10 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
+      <head>
+        <PlausibleGA />
+        <GA />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <header className="bg-white shadow-sm">
           <div className="container mx-auto px-4 py-4">
