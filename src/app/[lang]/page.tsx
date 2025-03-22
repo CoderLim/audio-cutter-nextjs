@@ -4,7 +4,7 @@ import { getDictionary } from '@/i18n/getDictionary'
 export default async function Home({
   params,
 }: {
-  params: { lang: string }
+  params: Promise<{ lang: string }>
 }) {
   const { lang } = await params;
   const dict = await getDictionary(lang)
@@ -103,7 +103,7 @@ export default async function Home({
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-gray-900 mb-8">{dict.faq.title}</h2>
           <div className="space-y-6">
-            {Object.entries(dict.faq.items).map(([key, item]) => (
+            {(Object.entries(dict.faq.items) as [string, { question: string; answer: string }][]).map(([key, item]) => (
               <div key={key}>
                 <h3 className="text-xl font-semibold mb-2">{item.question}</h3>
                 <p className="text-gray-600">{item.answer}</p>

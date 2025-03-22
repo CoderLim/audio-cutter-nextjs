@@ -198,7 +198,7 @@ export default function WaveformEditor() {
         wavesurfer.pause()
       }
     }
-  }, [isPlaying, selectedSegment])
+  }, [isPlaying, selectedSegment, setIsPlaying])
 
   const togglePlayPause = () => {
     if (!selectedSegment) return
