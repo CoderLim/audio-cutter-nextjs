@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MP3 Cutter Pro
 
-## Getting Started
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://mp3cutter.pro)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
-First, run the development server:
+A modern, browser-based audio cutting tool built with Next.js. Cut and trim your audio files directly in your browser with a beautiful waveform visualization.
+
+![MP3 Cutter Pro Screenshot](public/screenshot.png)
+
+## ✨ Features
+
+- 🎵 Browser-based audio cutting - no software installation needed
+- 🔒 Privacy-focused - all processing happens locally in your browser
+- 📊 Visual waveform editor for precise cutting
+- 💾 Multiple export formats (MP3, WAV)
+- 🌐 Multi-language support (English, Chinese, Spanish, Arabic, Japanese, Korean, German, French, Portuguese, Russian)
+- 📱 Responsive design - works on desktop and mobile
+- ⚡ Instant processing - no waiting for uploads
+
+## 🚀 Live Demo
+
+Visit [https://mp3cutter.pro](https://mp3cutter.pro) to try it out!
+
+## 🛠️ Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework
+- [WaveSurfer.js](https://wavesurfer-js.org/) - Audio visualization
+- [Tailwind CSS](https://tailwindcss.com/) - Styling
+- [TypeScript](https://www.typescriptlang.org/) - Type safety
+
+## 🏗️ Development
 
 ```bash
+# Clone the repository
+git clone https://github.com/CoderLim/audio-cutter-nextjs.git
+
+# Install dependencies
+cd audio-cutter-nextjs
+npm install
+
+# Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit [http://localhost:3000](http://localhost:3000) to see the app.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🌍 Internationalization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The app supports multiple languages. Translations are stored in `src/i18n/locales/`. To add a new language:
 
-## Learn More
+1. Create a new JSON file in the locales directory
+2. Add the language to `src/i18n/config.ts`
+3. Add translations following the existing structure
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🤝 Contributing
 
-## Deploy on Vercel
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📧 Contact
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If you have any questions or suggestions, feel free to [open an issue](https://github.com/CoderLim/audio-cutter-nextjs/issues) or reach out directly.
+
+---
+
+If you find this project helpful, please consider giving it a star ⭐
