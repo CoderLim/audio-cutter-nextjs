@@ -22,13 +22,15 @@ export async function generateStaticParams() {
   }));
 }
 
+type LayoutProps = {
+  children: React.ReactNode;
+  params: Promise<{ lang: string }>;
+}
+
 export default async function RootLayout({
   children,
   params,
-}: {
-  children: React.ReactNode;
-  params: { lang: string };
-}) {
+}: LayoutProps) {
   const { lang } = await params;
 
   return (
