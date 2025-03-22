@@ -35,10 +35,6 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
-      <head>
-        <PlausibleGA />
-        <GA />
-      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <header className="bg-white shadow-sm">
           <div className="container mx-auto px-4 py-4">
@@ -53,6 +49,8 @@ export default async function RootLayout({
         </header>
         {children}
       </body>
+      <PlausibleGA />
+      <GA />
     </html>
   );
 } 
