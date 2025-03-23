@@ -17,12 +17,19 @@
     "newFile": "Neue Datei auswählen"
   },
   "editor": {
-    "save": "Segment speichern",
-    "saving": "Wird gespeichert...",
+    "title": "Audio-Editor",
+    "start": "Startzeit",
+    "end": "Endzeit",
     "play": "Abspielen",
     "pause": "Pause",
-    "startTime": "Startzeit",
-    "endTime": "Endzeit"
+    "cut": "Schneiden",
+    "download": "Herunterladen",
+    "format": "Format",
+    "loading": "Wird geladen...",
+    "success": "Erfolg",
+    "error": "Fehler",
+    "save": "Segment speichern",
+    "saving": "Wird gespeichert..."
   },
   "features": {
     "title": "Hauptfunktionen unseres MP3-Schneiders",
@@ -97,5 +104,10 @@
         "answer": "Ja, unser MP3-Schneider ist vollständig responsiv und funktioniert auf allen Geräten, einschließlich Smartphones und Tablets. Die Oberfläche passt sich für optimale Benutzerfreundlichkeit an Ihre Bildschirmgröße an."
       }
     }
+  },
+  "languagePrompt": {
+    "question": "Möchten Sie zu {language} wechseln?",
+    "accept": "Sprache wechseln",
+    "decline": "Nein, danke"
   }
 } 

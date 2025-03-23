@@ -17,12 +17,19 @@
     "newFile": "Escolher Novo Arquivo"
   },
   "editor": {
-    "save": "Salvar Segmento",
-    "saving": "Salvando...",
+    "title": "Editor de Áudio",
+    "start": "Tempo Inicial",
+    "end": "Tempo Final",
     "play": "Reproduzir",
     "pause": "Pausar",
-    "startTime": "Tempo Inicial",
-    "endTime": "Tempo Final"
+    "cut": "Cortar",
+    "download": "Baixar",
+    "format": "Formato",
+    "loading": "Carregando...",
+    "success": "Sucesso",
+    "error": "Erro",
+    "save": "Salvar Segmento",
+    "saving": "Salvando..."
   },
   "features": {
     "title": "Principais Recursos do Nosso Cortador de MP3",
@@ -97,5 +104,10 @@
         "answer": "Sim, nosso cortador de MP3 é totalmente responsivo e funciona em todos os dispositivos, incluindo smartphones e tablets. A interface se adapta ao tamanho da sua tela para uma usabilidade ideal."
       }
     }
+  },
+  "languagePrompt": {
+    "question": "Gostaria de mudar para {language}?",
+    "accept": "Mudar idioma",
+    "decline": "Não, obrigado"
   }
 } 

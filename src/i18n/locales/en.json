@@ -17,12 +17,19 @@
     "newFile": "Choose New File"
   },
   "editor": {
-    "save": "Save Segment",
-    "saving": "Saving...",
+    "title": "Audio Editor",
+    "start": "Start Time",
+    "end": "End Time",
     "play": "Play",
     "pause": "Pause",
-    "startTime": "Start Time",
-    "endTime": "End Time"
+    "cut": "Cut",
+    "download": "Download",
+    "format": "Format",
+    "loading": "Loading...",
+    "success": "Success",
+    "error": "Error",
+    "save": "Save Segment",
+    "saving": "Saving..."
   },
   "features": {
     "title": "Main Features of Our MP3 Cutter",

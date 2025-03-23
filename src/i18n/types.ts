@@ -1,6 +1,4 @@
-import { i18nConfig } from './config'
-
-export type Locale = typeof i18nConfig.locales[number]['code'];
+export type Locale = 'en' | 'zh-CN' | 'es' | 'pt' | 'ar' | 'ja' | 'ko' | 'de' | 'fr' | 'ru'
 
 export interface Dictionary {
   meta: {
@@ -21,12 +19,19 @@ export interface Dictionary {
     newFile: string
   }
   editor: {
-    save: string
-    saving: string
+    title: string
+    start: string
+    end: string
     play: string
     pause: string
-    startTime: string
-    endTime: string
+    cut: string
+    download: string
+    format: string
+    loading: string
+    success: string
+    error: string
+    save: string
+    saving: string
   }
   features: {
     title: string

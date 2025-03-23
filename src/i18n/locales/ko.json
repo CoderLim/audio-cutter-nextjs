@@ -17,12 +17,19 @@
     "newFile": "새 파일 선택"
   },
   "editor": {
-    "save": "섹션 저장",
-    "saving": "저장 중...",
+    "title": "오디오 편집기",
+    "start": "시작 시간",
+    "end": "종료 시간",
     "play": "재생",
     "pause": "일시정지",
-    "startTime": "시작 시간",
-    "endTime": "종료 시간"
+    "cut": "자르기",
+    "download": "다운로드",
+    "format": "형식",
+    "loading": "로딩 중...",
+    "success": "성공",
+    "error": "오류",
+    "save": "섹션 저장",
+    "saving": "저장 중..."
   },
   "features": {
     "title": "주요 기능",
@@ -97,5 +104,10 @@
         "answer": "네, 우리의 MP3 커터는 완전히 반응형이며 스마트폰과 태블릿을 포함한 모든 기기에서 작동합니다. 인터페이스는 화면 크기에 맞춰 최적의 사용 경험을 제공합니다."
       }
     }
+  },
+  "languagePrompt": {
+    "question": "{language}로 전환하시겠습니까?",
+    "accept": "언어 전환",
+    "decline": "아니요, 괜찮습니다"
   }
 } 

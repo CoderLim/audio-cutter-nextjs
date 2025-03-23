@@ -10,26 +10,45 @@ const emptyDictionary: Dictionary = {
   meta: { title: '', description: '' },
   header: { title: '' },
   hero: { title: '', subtitle: '' },
-  upload: { title: '', dropzone: '', button: '', newFile: '' },
-  editor: { save: '', saving: '', play: '', pause: '', startTime: '', endTime: '' },
+  upload: {
+    title: '',
+    dropzone: '',
+    button: '',
+    newFile: '',
+  },
+  editor: {
+    title: '',
+    start: '',
+    end: '',
+    play: '',
+    pause: '',
+    cut: '',
+    download: '',
+    format: '',
+    loading: '',
+    success: '',
+    error: '',
+    save: '',
+    saving: '',
+  },
   features: {
     title: '',
     precise: { title: '', description: '' },
     waveform: { title: '', description: '' },
-    instant: { title: '', description: '' }
+    instant: { title: '', description: '' },
   },
   howTo: {
     title: '',
     step1: { title: '', description: '' },
     step2: { title: '', description: '' },
-    step3: { title: '', description: '' }
+    step3: { title: '', description: '' },
   },
   whyChoose: {
     title: '',
     browser: { title: '', description: '' },
     privacy: { title: '', description: '' },
     quality: { title: '', description: '' },
-    interface: { title: '', description: '' }
+    interface: { title: '', description: '' },
   },
   faq: {
     title: '',
@@ -38,9 +57,14 @@ const emptyDictionary: Dictionary = {
       size: { question: '', answer: '' },
       quality: { question: '', answer: '' },
       security: { question: '', answer: '' },
-      mobile: { question: '', answer: '' }
-    }
-  }
+      mobile: { question: '', answer: '' },
+    },
+  },
+  languagePrompt: {
+    question: '',
+    accept: '',
+    decline: '',
+  },
 }
 
 export function useDictionary() {

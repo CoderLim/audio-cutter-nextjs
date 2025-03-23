@@ -16,5 +16,9 @@ export default async function LangLayout({
   params,
 }: LayoutProps) {
   const { lang } = await params;
-  return children;
+  return (
+    <div lang={lang}>
+      {children}
+    </div>
+  );
 } 

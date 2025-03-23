@@ -17,12 +17,19 @@
     "newFile": "重新选择文件"
   },
   "editor": {
-    "save": "保存片段",
-    "saving": "保存中...",
+    "title": "音频编辑器",
+    "start": "开始时间",
+    "end": "结束时间",
     "play": "播放",
     "pause": "暂停",
-    "startTime": "开始时间",
-    "endTime": "结束时间"
+    "cut": "剪切",
+    "download": "下载",
+    "format": "格式",
+    "loading": "加载中...",
+    "success": "成功",
+    "error": "错误",
+    "save": "保存片段",
+    "saving": "保存中..."
   },
   "features": {
     "title": "主要功能",
@@ -97,5 +104,10 @@
         "answer": "是的，我们的 MP3 剪辑工具完全响应式，适用于所有设备，包括智能手机和平板电脑。界面会自动适应您的屏幕尺寸以获得最佳使用体验。"
       }
     }
+  },
+  "languagePrompt": {
+    "question": "是否切换到{language}？",
+    "accept": "切换语言",
+    "decline": "不用了，谢谢"
   }
 } 

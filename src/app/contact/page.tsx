@@ -10,7 +10,7 @@ export default function ContactPage() {
           <div>
             <h2 className="text-xl font-semibold mb-4">Get in Touch</h2>
             <p className="text-gray-600 mb-4">
-              Have questions or feedback? We'd love to hear from you. Please fill out the form below or reach out to us through our social media channels.
+              Have questions or feedback? We&apos;d love to hear from you. Please fill out the form below or reach out to us through our social media channels.
             </p>
           </div>
 

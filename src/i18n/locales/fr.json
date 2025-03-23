@@ -17,12 +17,19 @@
     "newFile": "Choisir un Nouveau Fichier"
   },
   "editor": {
-    "save": "Sauvegarder le Segment",
-    "saving": "Sauvegarde en cours...",
+    "title": "Éditeur Audio",
+    "start": "Temps de Début",
+    "end": "Temps de Fin",
     "play": "Lecture",
     "pause": "Pause",
-    "startTime": "Temps de Début",
-    "endTime": "Temps de Fin"
+    "cut": "Couper",
+    "download": "Télécharger",
+    "format": "Format",
+    "loading": "Chargement...",
+    "success": "Succès",
+    "error": "Erreur",
+    "save": "Sauvegarder le Segment",
+    "saving": "Sauvegarde en cours..."
   },
   "features": {
     "title": "Principales Fonctionnalités de Notre Découpeur MP3",
@@ -97,5 +104,10 @@
         "answer": "Oui, notre découpeur MP3 est entièrement réactif et fonctionne sur tous les appareils, y compris les smartphones et les tablettes. L'interface s'adapte à la taille de votre écran pour une utilisation optimale."
       }
     }
+  },
+  "languagePrompt": {
+    "question": "Voulez-vous passer en {language} ?",
+    "accept": "Changer de langue",
+    "decline": "Non, merci"
   }
 } 
