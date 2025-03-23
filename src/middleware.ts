@@ -1,23 +1,26 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { i18nConfig } from './i18n/config'
+import type { Locale } from './i18n/types'
 
 // 静态资源路径
 const PUBLIC_FILE = /\.(.*)$/
 
-// Get the preferred locale, similar to above or using a different method
-function getLocale(request: NextRequest) {
+// 获取浏览器首选语言
+function getPreferredLocale(request: NextRequest): Locale {
   const acceptLanguage = request.headers.get('accept-language')
   if (!acceptLanguage) return i18nConfig.defaultLocale
-  
+
   const preferredLocale = acceptLanguage
     .split(',')[0]
     .split('-')[0]
     .toLowerCase()
   
-  return i18nConfig.locales.find(locale => 
+  const detectedLocale = i18nConfig.locales.find(locale => 
     locale.code.toLowerCase().startsWith(preferredLocale)
-  )?.code || i18nConfig.defaultLocale
+  )?.code
+
+  return detectedLocale || i18nConfig.defaultLocale
 }
 
 export function middleware(request: NextRequest) {
@@ -35,8 +38,10 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale) return
 
+  // 获取浏览器首选语言
+  const locale = getPreferredLocale(request)
+  
   // 重定向到带有语言代码的路径
-  const locale = getLocale(request)
   request.nextUrl.pathname = `/${locale}${pathname}`
   return NextResponse.redirect(request.nextUrl)
 }

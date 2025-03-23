@@ -102,4 +102,9 @@ export interface Dictionary {
       }
     }
   }
+  languagePrompt: {
+    question: string
+    accept: string
+    decline: string
+  }
 } 

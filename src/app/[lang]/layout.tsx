@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import Image from "next/image";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import LanguageSwitchPrompt from "@/components/LanguageSwitchPrompt";
 import PlausibleGA from "@/components/PlausibleGA";
 import GA from "@/components/GA";
 import { i18nConfig } from "@/i18n/config";
@@ -72,6 +73,7 @@ export default async function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GA />
         <PlausibleGA />
+        <LanguageSwitchPrompt />
         <header className="bg-white shadow-sm">
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">

@@ -97,5 +97,10 @@
         "answer": "Yes, our MP3 cutter is fully responsive and works on all devices, including smartphones and tablets. The interface adapts to your screen size for optimal usability."
       }
     }
+  },
+  "languagePrompt": {
+    "question": "Would you like to switch to {language}?",
+    "accept": "Switch language",
+    "decline": "No, thanks"
   }
 } 
