@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
+import Link from "next/link";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 import LanguageSwitchPrompt from "@/components/LanguageSwitchPrompt";
 import PlausibleGA from "@/components/PlausibleGA";
@@ -67,10 +68,10 @@ export default function RootLayout({
         <header className="bg-white shadow-sm">
           <div className="container mx-auto px-4 py-4">
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-2">
+              <Link href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
                 <Image src="/logo.svg" alt="MP3 Cutter Logo" width={32} height={32} />
                 <span className="text-xl font-semibold text-gray-900">MP3 Cutter</span>
-              </div>
+              </Link>
               <LanguageSwitcher />
             </div>
           </div>
