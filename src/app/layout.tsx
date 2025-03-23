@@ -8,13 +8,15 @@ import GA from "@/components/GA";
 import Footer from "@/components/Footer";
 
 const geistSans = Geist({
-  variable: "--font-geist-sans",
   subsets: ["latin"],
+  variable: '--font-geist-sans',
+  display: 'swap',
 });
 
 const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
+  variable: '--font-geist-mono',
+  display: 'swap',
 });
 
 export default function RootLayout({
@@ -58,7 +60,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://mp3cutter.pro" />
         <meta name="robots" content="index, follow" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased flex flex-col min-h-screen`}>
         <GA />
         <PlausibleGA />
         <LanguageSwitchPrompt />
