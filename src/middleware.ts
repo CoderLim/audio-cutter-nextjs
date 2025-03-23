@@ -6,6 +6,9 @@ import type { Locale } from './i18n/types'
 // 静态资源路径
 const PUBLIC_FILE = /\.(.*)$/
 
+// 不需要语言重定向的路径
+const NO_LANG_REDIRECT_PATHS = ['/privacy', '/contact', '/terms']
+
 // 获取浏览器首选语言
 function getPreferredLocale(request: NextRequest): Locale {
   const acceptLanguage = request.headers.get('accept-language')
@@ -28,6 +31,11 @@ export function middleware(request: NextRequest) {
   
   // 如果是静态资源，直接返回
   if (PUBLIC_FILE.test(pathname)) {
+    return
+  }
+
+  // 检查是否是无需语言重定向的路径
+  if (NO_LANG_REDIRECT_PATHS.some(path => pathname === path)) {
     return
   }
 
