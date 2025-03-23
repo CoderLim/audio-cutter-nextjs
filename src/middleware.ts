@@ -2,6 +2,9 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { i18nConfig } from './i18n/config'
 
+// 静态资源路径
+const PUBLIC_FILE = /\.(.*)$/
+
 // Get the preferred locale, similar to above or using a different method
 function getLocale(request: NextRequest) {
   const acceptLanguage = request.headers.get('accept-language')
@@ -19,15 +22,20 @@ function getLocale(request: NextRequest) {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
+  
+  // 如果是静态资源，直接返回
+  if (PUBLIC_FILE.test(pathname)) {
+    return
+  }
 
-  // Check if the pathname already has a locale
+  // 检查请求路径是否已经包含语言代码
   const pathnameHasLocale = i18nConfig.locales.some(
     locale => pathname.startsWith(`/${locale.code}/`) || pathname === `/${locale.code}`
   )
 
   if (pathnameHasLocale) return
 
-  // Redirect if there is no locale
+  // 重定向到带有语言代码的路径
   const locale = getLocale(request)
   request.nextUrl.pathname = `/${locale}${pathname}`
   return NextResponse.redirect(request.nextUrl)

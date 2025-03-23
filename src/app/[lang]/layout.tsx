@@ -35,6 +35,14 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/site.webmanifest" />
+        <meta name="theme-color" content="#4F46E5" />
+        <meta name="msapplication-TileColor" content="#4F46E5" />
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <GA />
         <PlausibleGA />
