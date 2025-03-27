@@ -65,12 +65,16 @@ const blogPosts = {
   },
 };
 
-type Props = {
-  params: { slug: string }
+interface PageProps {
+  params: Promise<{ 
+    slug: string;
+  }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const post = blogPosts[params.slug as keyof typeof blogPosts];
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const post = blogPosts[resolvedParams.slug as keyof typeof blogPosts];
   
   if (!post) {
     return {
@@ -87,13 +91,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.description,
       type: 'article',
       publishedTime: post.date,
-      url: `https://mp3cutter.pro/blog/${params.slug}`,
+      url: `https://mp3cutter.pro/blog/${resolvedParams.slug}`,
     },
   };
 }
 
-export default function BlogPost({ params }: Props) {
-  const post = blogPosts[params.slug as keyof typeof blogPosts];
+export default async function BlogPost({ params }: PageProps) {
+  const resolvedParams = await params;
+  const post = blogPosts[resolvedParams.slug as keyof typeof blogPosts];
 
   if (!post) {
     notFound();

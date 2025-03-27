@@ -1,4 +1,4 @@
-export type Locale = 'en' | 'zh-CN' | 'es' | 'pt' | 'ar' | 'ja' | 'ko' | 'de' | 'fr' | 'ru'
+export type Locale = 'en' | 'zh-CN'
 
 export interface Dictionary {
   meta: {

@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getDictionary } from '@/i18n/get-dictionary';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Locale } from '@/i18n/types';
 
 // 这里可以替换为实际的博客数据
 const blogPosts = {
@@ -140,16 +141,18 @@ const blogPosts = {
   },
 };
 
-type Props = {
-  params: { 
-    lang: string;
+interface PageProps {
+  params: Promise<{ 
+    lang: Locale;
     slug: string;
-  }
+  }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const dict = await getDictionary(params.lang);
-  const post = blogPosts[params.slug as keyof typeof blogPosts];
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const dict = await getDictionary(resolvedParams.lang);
+  const post = blogPosts[resolvedParams.slug as keyof typeof blogPosts];
   
   if (!post) {
     return {
@@ -166,7 +169,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: post.description,
       type: 'article',
       publishedTime: post.date,
-      url: `https://mp3cutter.pro/${params.lang}/blog/${params.slug}`,
+      url: `https://mp3cutter.pro/${resolvedParams.lang}/blog/${resolvedParams.slug}`,
       images: [
         {
           url: `https://mp3cutter.pro${post.image}`,
@@ -179,8 +182,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function BlogPost({ params }: Props) {
-  const post = blogPosts[params.slug as keyof typeof blogPosts];
+export default async function BlogPost({ params }: PageProps) {
+  const resolvedParams = await params;
+  const post = blogPosts[resolvedParams.slug as keyof typeof blogPosts];
 
   if (!post) {
     notFound();
@@ -232,7 +236,7 @@ export default async function BlogPost({ params }: Props) {
 
               <div className="mt-12 pt-8 border-t">
                 <Link 
-                  href={`/${params.lang}/blog`}
+                  href={`/${resolvedParams.lang}/blog`}
                   className="inline-flex items-center text-indigo-600 hover:text-indigo-700"
                 >
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

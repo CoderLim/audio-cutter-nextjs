@@ -65,6 +65,13 @@ const emptyDictionary: Dictionary = {
     accept: '',
     decline: '',
   },
+  blog: {
+    title: '',
+    description: '',
+    keywords: '',
+    notFound: '',
+    notFoundDescription: '',
+  },
 }
 
 export function useDictionary() {

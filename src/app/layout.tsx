@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter as FontSans } from "next/font/google";
 import "./globals.css";
 import Image from "next/image";
 import Link from "next/link";
@@ -8,15 +8,9 @@ import PlausibleGA from "@/components/PlausibleGA";
 import GA from "@/components/GA";
 import Footer from "@/components/Footer";
 
-const geistSans = Geist({
+const fontSans = FontSans({
   subsets: ["latin"],
-  variable: '--font-geist-sans',
-  display: 'swap',
-});
-
-const geistMono = Geist_Mono({
-  subsets: ["latin"],
-  variable: '--font-geist-mono',
+  variable: '--font-sans',
   display: 'swap',
 });
 
@@ -61,7 +55,7 @@ export default function RootLayout({
         <link rel="canonical" href="https://mp3cutter.pro" />
         <meta name="robots" content="index, follow" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased flex flex-col min-h-screen`}>
+      <body className={`${fontSans.variable} font-sans antialiased flex flex-col min-h-screen`}>
         <GA />
         <PlausibleGA />
         <LanguageSwitchPrompt />

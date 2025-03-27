@@ -2,9 +2,18 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { getDictionary } from '@/i18n/get-dictionary';
 import Image from 'next/image';
+import { Locale } from '@/i18n/types';
 
-export async function generateMetadata({ params: { lang } }: { params: { lang: string } }): Promise<Metadata> {
-  const dict = await getDictionary(lang);
+interface PageProps {
+  params: Promise<{ 
+    lang: Locale;
+  }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const resolvedParams = await params;
+  const dict = await getDictionary(resolvedParams.lang);
   
   return {
     title: dict.blog.title,
@@ -14,7 +23,7 @@ export async function generateMetadata({ params: { lang } }: { params: { lang: s
       title: dict.blog.title,
       description: dict.blog.description,
       type: 'website',
-      url: `https://mp3cutter.pro/${lang}/blog`,
+      url: `https://mp3cutter.pro/${resolvedParams.lang}/blog`,
     },
   };
 }
@@ -53,8 +62,9 @@ const blogPosts = [
   },
 ];
 
-export default async function BlogPage({ params: { lang } }: { params: { lang: string } }) {
-  const dict = await getDictionary(lang);
+export default async function BlogPage({ params }: PageProps) {
+  const resolvedParams = await params;
+  const dict = await getDictionary(resolvedParams.lang);
 
   return (
     <div className="bg-gray-50 min-h-screen">
@@ -66,7 +76,7 @@ export default async function BlogPage({ params: { lang } }: { params: { lang: s
           <div className="grid gap-8">
             {blogPosts.map((post) => (
               <article key={post.id} className="bg-white rounded-xl shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-300">
-                <Link href={`/${lang}/blog/${post.slug}`} className="block">
+                <Link href={`/${resolvedParams.lang}/blog/${post.slug}`} className="block">
                   <div className="relative h-48 md:h-64">
                     <Image
                       src={post.image}
