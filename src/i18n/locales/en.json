@@ -109,5 +109,12 @@
     "question": "Would you like to switch to {language}?",
     "accept": "Switch language",
     "decline": "No, thanks"
+  },
+  "blog": {
+    "title": "Blog - MP3 Cutter | Audio Editing Tips and Tutorials",
+    "description": "Learn about audio editing, MP3 cutting techniques, and get tips for the best audio editing experience. Expert guides and tutorials from MP3 Cutter.",
+    "keywords": "audio editing blog, mp3 cutting tutorial, audio editing tips, mp3 editor guide",
+    "notFound": "Blog Post Not Found - MP3 Cutter",
+    "notFoundDescription": "The requested blog post could not be found."
   }
 } 

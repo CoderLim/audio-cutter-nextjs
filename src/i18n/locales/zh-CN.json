@@ -109,5 +109,12 @@
     "question": "是否切换到{language}？",
     "accept": "切换语言",
     "decline": "不用了，谢谢"
+  },
+  "blog": {
+    "title": "博客 - MP3 剪辑工具 | 音频编辑技巧和教程",
+    "description": "了解音频编辑、MP3 切割技术，获取最佳音频编辑体验的技巧。来自 MP3 剪辑工具的专业指南和教程。",
+    "keywords": "音频编辑博客, mp3切割教程, 音频编辑技巧, mp3编辑器指南",
+    "notFound": "未找到博客文章 - MP3 剪辑工具",
+    "notFoundDescription": "请求的博客文章未找到。"
   }
 } 

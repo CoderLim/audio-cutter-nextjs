@@ -72,7 +72,12 @@ export default function RootLayout({
                 <Image src="/logo.svg" alt="MP3 Cutter Logo" width={32} height={32} />
                 <span className="text-xl font-semibold text-gray-900">MP3 Cutter</span>
               </Link>
-              <LanguageSwitcher />
+              <div className="flex items-center gap-6">
+                <Link href="/en/blog" className="text-gray-600 hover:text-indigo-600 transition-colors">
+                  Blog
+                </Link>
+                <LanguageSwitcher />
+              </div>
             </div>
           </div>
         </header>

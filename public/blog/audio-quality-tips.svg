@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景 -->
+  <rect width="1200" height="630" fill="#4F46E5"/>
+  
+  <!-- 音频波形 -->
+  <path d="M200 315 L300 165 L400 465 L500 165 L600 315 L700 165 L800 465 L900 165 L1000 315" stroke="white" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- 装饰性圆点 -->
+  <circle cx="300" cy="315" r="8" fill="white"/>
+  <circle cx="600" cy="315" r="8" fill="white"/>
+  <circle cx="900" cy="315" r="8" fill="white"/>
+  
+  <!-- 文字 -->
+  <text x="600" y="400" text-anchor="middle" fill="white" font-family="Arial" font-size="48" font-weight="bold">
+    Audio Quality Tips
+  </text>
+  <text x="600" y="450" text-anchor="middle" fill="white" font-family="Arial" font-size="24">
+    Maintain High Quality When Editing
+  </text>
+</svg> 

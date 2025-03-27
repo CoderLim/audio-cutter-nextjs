@@ -112,4 +112,11 @@ export interface Dictionary {
     accept: string
     decline: string
   }
+  blog: {
+    title: string
+    description: string
+    keywords: string
+    notFound: string
+    notFoundDescription: string
+  }
 } 
