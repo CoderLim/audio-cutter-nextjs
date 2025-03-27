@@ -180,7 +180,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogPost({ params }: Props) {
-  const dict = await getDictionary(params.lang);
   const post = blogPosts[params.slug as keyof typeof blogPosts];
 
   if (!post) {
