@@ -9,21 +9,10 @@ const PUBLIC_FILE = /\.(.*)$/
 // 不需要语言重定向的路径
 const NO_LANG_REDIRECT_PATHS = ['/privacy', '/contact', '/terms']
 
-// 获取浏览器首选语言
-function getPreferredLocale(request: NextRequest): Locale {
-  const acceptLanguage = request.headers.get('accept-language')
-  if (!acceptLanguage) return i18nConfig.defaultLocale
-
-  const preferredLocale = acceptLanguage
-    .split(',')[0]
-    .split('-')[0]
-    .toLowerCase()
-  
-  const detectedLocale = i18nConfig.locales.find(locale => 
-    locale.code.toLowerCase().startsWith(preferredLocale)
-  )?.code
-
-  return detectedLocale || i18nConfig.defaultLocale
+// 获取默认语言，不再根据浏览器语言自动判断
+function getPreferredLocale(): Locale {
+  // 直接返回配置中的默认语言，强制使用英文
+  return i18nConfig.defaultLocale;
 }
 
 export function middleware(request: NextRequest) {
@@ -46,8 +35,8 @@ export function middleware(request: NextRequest) {
 
   if (pathnameHasLocale) return
 
-  // 获取浏览器首选语言
-  const locale = getPreferredLocale(request)
+  // 获取默认语言，不再根据浏览器语言判断
+  const locale = getPreferredLocale()
   
   // 重定向到带有语言代码的路径
   request.nextUrl.pathname = `/${locale}${pathname}`

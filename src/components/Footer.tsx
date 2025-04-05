@@ -10,7 +10,10 @@ export default function Footer() {
   ];
 
   const friendlyLinks = [
-    { name: 'TransferFiles.pro', url: 'https://transferfiles.pro/' },
+    { name: 'TransferFiles', url: 'https://transferfiles.pro/' },
+    { name: 'UnblockedGames', url: 'https://unblocked-games.cc/' },
+    { name: 'SprunkiRetake', url: 'https://sprunkiretake.xyz/' },
+    { name: 'MultiplayerGames', url: 'https://multiplayergames.click/' },
   ];
 
   return (
