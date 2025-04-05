@@ -9,6 +9,10 @@ export default function Footer() {
     { name: 'Contact Us', path: '/contact' },
   ];
 
+  const friendlyLinks = [
+    { name: 'TransferFiles.pro', url: 'https://transferfiles.pro/' },
+  ];
+
   return (
     <footer className="bg-white border-t">
       <div className="container mx-auto px-4 py-8">
@@ -83,7 +87,26 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t">
+        {/* Friendly Links */}
+        <div className="mt-8 pt-4 border-t">
+          <h3 className="text-sm font-semibold text-gray-900 mb-4 text-center">友情链接</h3>
+          <ul className="flex flex-wrap justify-center gap-4">
+            {friendlyLinks.map((link) => (
+              <li key={link.url}>
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-gray-600 hover:text-gray-900"
+                >
+                  {link.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-4 pt-4 border-t">
           <p className="text-sm text-gray-500 text-center">
             © {new Date().getFullYear()} MP3Cutter. All rights reserved.
           </p>
