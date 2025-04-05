@@ -169,6 +169,67 @@ export default function WaveformEditor({ dictionary }: WaveformEditorProps) {
     }
   }, [audioFile, setSelectedSegmentStore])
 
+  // 阻止拖放到页面时浏览器默认行为 - 使用更简单的防御策略
+  useEffect(() => {
+    // 全局拖放防御
+    const handleGlobalDrop = (e: DragEvent) => {
+      // 放宽上传区域的判断条件
+      const target = e.target as HTMLElement;
+      const isInUploadArea = Boolean(
+        target.closest('[data-dropzone]') || 
+        target.closest('.upload-area') ||
+        document.querySelector('[data-dropzone]')?.contains(target) ||
+        document.querySelector('.upload-area')?.contains(target)
+      );
+      
+      // 打印更详细的信息用于调试
+      console.log('全局drop事件:', {
+        target: target.tagName, 
+        inUploadArea: isInUploadArea,
+        hasDropzoneParent: Boolean(target.closest('[data-dropzone]')),
+        path: e.composedPath().map(el => (el as HTMLElement).tagName || el.toString()).join(' > ')
+      });
+      
+      // 阻止默认行为（浏览器会自动打开文件）
+      e.preventDefault();
+      
+      // 重要：无论在哪里都不阻止事件冒泡
+      // 让事件自然传播到上传组件
+      // 不再使用: if (!isInUploadArea) { e.stopPropagation(); }
+    };
+    
+    // 处理拖动过程中的事件
+    const handleGlobalDragOver = (e: DragEvent) => {
+      // 阻止默认行为（显示"+"图标）
+      e.preventDefault();
+      
+      // 无论在哪里都不阻止事件冒泡
+      // 让事件自然传播到上传组件
+    };
+    
+    // 在document级别监听，而不是window级别
+    document.addEventListener('drop', handleGlobalDrop, true);
+    document.addEventListener('dragover', handleGlobalDragOver, true);
+    
+    // 简单的页面级防御 - 只阻止默认行为，不阻止冒泡
+    document.ondragover = (e) => { 
+      e.preventDefault(); 
+      return false;
+    };
+    
+    document.ondrop = (e) => {
+      e.preventDefault();
+      return false;
+    };
+    
+    return () => {
+      document.removeEventListener('drop', handleGlobalDrop, true);
+      document.removeEventListener('dragover', handleGlobalDragOver, true);
+      document.ondragover = null;
+      document.ondrop = null;
+    };
+  }, []);
+
   // 播放/暂停控制
   useEffect(() => {
     if (wavesurferRef.current && selectedSegment) {
@@ -605,7 +666,33 @@ export default function WaveformEditor({ dictionary }: WaveformEditorProps) {
           </div>
         </div>
       ) : (
-        <div className="upload-area">
+        <div 
+          className="upload-area" 
+          data-dropzone="true"
+          onDragOver={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('WaveformEditor上传区域: dragover事件');
+          }}
+          onDrop={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            console.log('WaveformEditor上传区域: drop事件');
+            
+            // 从拖放事件中获取文件
+            const files = e.dataTransfer?.files;
+            if (files && files.length > 0) {
+              const file = files[0];
+              // 检查是否为音频文件
+              if (file.type.startsWith('audio/')) {
+                console.log('WaveformEditor接收到音频文件:', file.name);
+                useAudioStore.getState().setAudioFile(file);
+              } else {
+                console.log('不是有效的音频文件:', file.type);
+              }
+            }
+          }}
+        >
           <h2 className="text-xl font-semibold text-gray-900 mb-4">{dictionary.upload.title}</h2>
           <p className="mb-4 text-gray-600">{dictionary.upload.dropzone}</p>
           <input
