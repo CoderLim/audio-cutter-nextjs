@@ -67,3 +67,5 @@ If you have any questions or suggestions, feel free to [open an issue](https://g
 ---
 
 If you find this project helpful, please consider giving it a star ⭐
+
+[![ko-fi](https://cdn.ko-fi.com/cdn/kofi2.png)](https://ko-fi.com/CoderLim)
