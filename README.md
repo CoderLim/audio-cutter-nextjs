@@ -62,10 +62,13 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📧 Contact
 
-If you have any questions or suggestions, feel free to [open an issue](https://github.com/CoderLim/audio-cutter-nextjs/issues) or reach out directly.
-
----
-
 If you find this project helpful, please consider giving it a star ⭐
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/CoderLim)
+
+---
+
+If you have any questions or suggestions, feel free to [open an issue](https://github.com/CoderLim/audio-cutter-nextjs/issues) or reach out directly.
+
+
+
