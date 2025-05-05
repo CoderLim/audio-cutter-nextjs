@@ -1,19 +1,12 @@
 import Link from 'next/link';
 import { i18nConfig } from '@/i18n/config';
-
+import FriendLinks from './FriendLinks';
 export default function Footer() {
   const pages = [
     { name: 'Home', path: '/' },
     { name: 'Privacy Policy', path: '/privacy' },
     { name: 'Terms of Service', path: '/terms' },
     { name: 'Contact Us', path: '/contact' },
-  ];
-
-  const friendlyLinks = [
-    { name: 'TransferFiles', url: 'https://transferfiles.pro/' },
-    { name: 'UnblockedGames', url: 'https://unblocked-games.cc/' },
-    { name: 'SprunkiRetake', url: 'https://sprunkiretake.xyz/' },
-    { name: 'MultiplayerGames', url: 'https://multiplayergames.click/' },
   ];
 
   return (
@@ -92,21 +85,7 @@ export default function Footer() {
 
         {/* Friendly Links */}
         <div className="mt-8 pt-4 border-t">
-          <h3 className="text-sm font-semibold text-gray-900 mb-4 text-center">友情链接</h3>
-          <ul className="flex flex-wrap justify-center gap-4">
-            {friendlyLinks.map((link) => (
-              <li key={link.url}>
-                <a
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sm text-gray-600 hover:text-gray-900"
-                >
-                  {link.name}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <FriendLinks />
         </div>
 
         <div className="mt-4 pt-4 border-t">
