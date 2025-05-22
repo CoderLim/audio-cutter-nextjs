@@ -11,7 +11,6 @@ async function getFriendLinks(): Promise<FriendLink[]> {
   try {
     // 调用API获取友链数据
     const response = await fetch('https://api.driftbossgame.org/get-friend-links', {
-      cache: 'no-store', // 禁用缓存，确保每次都获取最新数据
       next: { revalidate: 3600 } // 每小时重新验证一次数据
     });
     
