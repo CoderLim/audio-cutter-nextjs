@@ -7,6 +7,7 @@ import LanguageSwitchPrompt from "@/components/LanguageSwitchPrompt";
 import PlausibleGA from "@/components/PlausibleGA";
 import GA from "@/components/GA";
 import Footer from "@/components/Footer";
+import AdSense from "@/components/Adsense";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -79,6 +80,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <AdSense />
       </body>
     </html>
   );
